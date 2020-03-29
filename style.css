@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap");
+
+:root{
+    --primary-color: #474747;
+    --dark-color: #57C5E6;
+    --light-color : #fd0909;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--dark-color);
+}
+
+.py{
+    padding: 20px 0;
+}
+.px{
+    padding: 0 20px;
+}
+.my{
+    margin: 20px 0;
+}
+.mx{
+    margin: 0 2px;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px;
+}
+
+.country {
+    padding: 1.5rem;
+    color: rgb(0, 0, 2);
+}
+.title {
+    font-size: 38px;
+}
+
+.location {
+    font-size: 18px;
+}
+
+.current {
+    font-size: 25px;
+    color: rgb(16, 6, 105);
+    font-weight: bold;
+}
+
+.map svg{
+    height: 100%;
+    position: relative;
+    filter: drop-shadow(3px 3px 5px #3a3a3a);
+    stroke-opacity: 1;
+    /*border-radius: 5px;*/
+    width: 100%;
+    animation: mapAni 1s;
+}
+.map path{
+    fill: var(--primary-color);
+    position: absolute;
+}
+.map path:hover{
+    fill: #2a2a2a;
+}
+
+/* -- //Responsive code -- */
+/* loader Bar */
+::-webkit-scrollbar{
+    display: none;
+}
+
+@media screen and (max-width: 520px){
+
+    *{
+        font-size: 10px;
+    }
+    .container{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 5px;
+    }
+}
